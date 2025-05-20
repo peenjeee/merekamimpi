@@ -1,6 +1,7 @@
 # Allow all crawlers
 User-agent: *
 Allow: /
+Disallow: /sitemap_new.xml
 
 # Sitemap location
 Sitemap: https://merekamimpi.my.id/sitemap.xml
