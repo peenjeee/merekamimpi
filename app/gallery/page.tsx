@@ -161,7 +161,7 @@ export default function GalleryPage() {
               "@type": "ListItem",
               position: 1,
               name: "Beranda",
-              item: "https://merekamimpi.com",
+              item: "https://merekamimpi.my.id",
             },
             {
               "@type": "ListItem",

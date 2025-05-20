@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 
 export async function GET() {
   // Base URL of your website
-  const baseUrl = "https://merekamimpi.com"
+  const baseUrl = "https://merekamimpi.my.id"
 
   // Get the current date in the format YYYY-MM-DD
   const date = new Date().toISOString().split("T")[0]

@@ -38,7 +38,7 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://merekamimpi.com"),
+  metadataBase: new URL("https://merekamimpi.my.id"),
   alternates: {
     canonical: "/",
   },
@@ -46,7 +46,7 @@ export const metadata = {
     title: "Merekamimpi - Jasa Fotografi Profesional Yogyakarta",
     description:
       "Merekamimpi adalah jasa fotografi profesional yang berbasis di Yogyakarta, hadir untuk mengabadikan setiap momen berharga dengan gaya yang hangat, estetik, dan penuh cerita.",
-    url: "https://merekamimpi.com",
+    url: "https://merekamimpi.my.id",
     siteName: "Merekamimpi Photography",
     images: [
       {
