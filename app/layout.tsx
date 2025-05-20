@@ -35,7 +35,7 @@ export default function RootLayout({
             <AnimationProvider>
               {children}
               <ScrollToTop />
-              <CustomCursor trailEffect={true} />
+              <CustomCursor trailEffect={false} />
             </AnimationProvider>
             <Analytics />
           </Suspense>
