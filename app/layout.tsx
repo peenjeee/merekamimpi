@@ -32,6 +32,8 @@ export default function RootLayout({
       <body className={inter.className}>
       <meta name="google-site-verification" content="Dl99mJiGpiJN25kcb8Fa97CFsfY3zimdWV-nKQh51Gs" />
       <meta name="google-adsense-account" content="ca-pub-2491405868841693"></meta>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2491405868841693"
+     crossorigin="anonymous"></script>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Suspense>
             <AnimationProvider>
@@ -42,6 +44,8 @@ export default function RootLayout({
             <Analytics />
           </Suspense>
         </ThemeProvider>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2491405868841693"
+     crossorigin="anonymous"></script>
       </body>
     </html>
   )
