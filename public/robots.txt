@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://merekamimpi.my.id/sitemap.xml
+Sitemap: https://www.merekamimpi.my.id/sitemap.xml
