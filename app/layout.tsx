@@ -30,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <body className={inter.className}>
+      <meta name="google-site-verification" content="Dl99mJiGpiJN25kcb8Fa97CFsfY3zimdWV-nKQh51Gs" />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Suspense>
             <AnimationProvider>
