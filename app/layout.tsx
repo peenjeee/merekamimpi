@@ -20,6 +20,66 @@ export const metadata = {
   title: "Merekamimpi - Jasa Fotografi Profesional Yogyakarta",
   description:
     "Merekamimpi adalah jasa fotografi profesional yang berbasis di Yogyakarta, hadir untuk mengabadikan setiap momen berharga dengan gaya yang hangat, estetik, dan penuh cerita.",
+  keywords: [
+    "fotografi yogyakarta",
+    "jasa foto yogyakarta",
+    "fotografer wisuda",
+    "foto produk",
+    "foto event",
+    "foto potret",
+    "merekamimpi",
+    "fotografer profesional yogyakarta",
+  ],
+  authors: [{ name: "Merekamimpi Photography" }],
+  creator: "Merekamimpi Photography",
+  publisher: "Merekamimpi Photography",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://merekamimpi.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Merekamimpi - Jasa Fotografi Profesional Yogyakarta",
+    description:
+      "Merekamimpi adalah jasa fotografi profesional yang berbasis di Yogyakarta, hadir untuk mengabadikan setiap momen berharga dengan gaya yang hangat, estetik, dan penuh cerita.",
+    url: "https://merekamimpi.com",
+    siteName: "Merekamimpi Photography",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Merekamimpi Photography",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Merekamimpi - Jasa Fotografi Profesional Yogyakarta",
+    description:
+      "Merekamimpi adalah jasa fotografi profesional yang berbasis di Yogyakarta, hadir untuk mengabadikan setiap momen berharga dengan gaya yang hangat, estetik, dan penuh cerita.",
+    images: ["/og-image.jpg"],
+  },
+  verification: {
+    google: "Dl99mJiGpiJN25kcb8Fa97CFsfY3zimdWV-nKQh51Gs", // Replace with your actual verification code
+  },
 }
 
 export default function RootLayout({

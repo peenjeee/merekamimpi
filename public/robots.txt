@@ -1,3 +1,6 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
-Sitemap: https://www.merekamimpi.my.id/sitemap.xml
+
+# Sitemap location
+Sitemap: https://merekamimpi.com/sitemap.xml

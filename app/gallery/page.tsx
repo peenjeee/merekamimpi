@@ -13,6 +13,8 @@ import { Tooltip } from "@/components/tooltip"
 import { showToast } from "@/utils/sweet-alert"
 import { SimpleGallery } from "@/components/simple-gallery" // Use SimpleGallery instead
 import { Navbar } from "@/components/navbar"
+import { SEOHead } from "@/components/seo-head"
+import { JsonLd } from "@/components/json-ld"
 
 export default function GalleryPage() {
   // Refs for animation targets

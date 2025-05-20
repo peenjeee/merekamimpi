@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.merekamimpi.my.id/</loc>
-    <priority>1</priority>
-    <changefreq>never</changefreq>
+    <loc>https://merekamimpi.com/</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.merekamimpi.my.id/gallery</loc>
-    <priority>1</priority>
-    <changefreq>never</changefreq>
+    <loc>https://merekamimpi.com/gallery</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+  <!-- Add more URLs as you create more pages -->
 </urlset>

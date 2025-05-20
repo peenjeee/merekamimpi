@@ -22,6 +22,9 @@ import { AnimatedElement } from "@/components/animated-element"
 // First, add the import at the top of the file:
 import { Navbar } from "@/components/navbar"
 
+import { SEOHead } from "@/components/seo-head"
+import { JsonLd } from "@/components/json-ld"
+
 export default function Home() {
   const searchParams = useSearchParams()
   const serviceParam = searchParams.get("service")
