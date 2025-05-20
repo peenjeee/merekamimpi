@@ -133,8 +133,46 @@ export default function GalleryPage() {
     }
   }, [activeCategory])
 
+  // Create structured data for the gallery page
+  const galleryStructuredData = {
+    "@type": "ImageGallery",
+    name: "Galeri Karya Merekamimpi Photography",
+    description: "Koleksi foto-foto terbaik dari berbagai proyek fotografi Merekamimpi di Yogyakarta",
+    url: "https://merekamimpi.com/gallery",
+    image: galleryItems.map((item) => item.imageUrl),
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* SEO Components */}
+      <SEOHead
+        title="Galeri Karya Merekamimpi - Fotografi Profesional Yogyakarta"
+        description="Lihat koleksi foto-foto terbaik dari berbagai proyek fotografi Merekamimpi di Yogyakarta, termasuk foto wisuda, produk, event, dan potret."
+        canonicalUrl="https://merekamimpi.com/gallery"
+        structuredData={galleryStructuredData}
+        structuredDataType="Article"
+      />
+
+      <JsonLd
+        type="BreadcrumbList"
+        data={{
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Beranda",
+              item: "https://merekamimpi.com",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Galeri",
+              item: "https://merekamimpi.com/gallery",
+            },
+          ],
+        }}
+      />
+
       <ParticleBackground />
       <Navbar isHomePage={false} />
 

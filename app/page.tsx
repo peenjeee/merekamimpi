@@ -142,8 +142,52 @@ export default function Home() {
 
   const whatsappLink = "https://api.whatsapp.com/send?phone=6285975200852"
 
+  // Create structured data for the business
+  const businessStructuredData = {
+    name: "Merekamimpi Photography",
+    description: "Jasa fotografi profesional di Yogyakarta untuk wisuda, produk, event, dan potret.",
+    url: "https://merekamimpi.com",
+    telephone: "+6285975200852",
+    email: "merekamimpi@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Yogyakarta",
+      addressRegion: "DIY",
+      addressCountry: "ID",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "-7.7956",
+      longitude: "110.3695",
+    },
+    image: "/placeholder.svg?height=1000&width=800",
+    priceRange: "Rp300.000 - Rp2.000.000",
+    openingHours: "Mo-Su 09:00-21:00",
+    sameAs: [
+      "https://www.instagram.com/merekamimpi",
+      "https://linktr.ee/merekamimpi",
+      "https://www.tiktok.com/@merekamimpi",
+    ],
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
+      {/* SEO Components */}
+      <SEOHead structuredData={businessStructuredData} structuredDataType="LocalBusiness" />
+
+      <JsonLd
+        type="WebSite"
+        data={{
+          name: "Merekamimpi Photography",
+          url: "https://merekamimpi.com",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://merekamimpi.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        }}
+      />
+
       {/* Then replace the header section with: */}
       <Navbar isHomePage={true} />
 
@@ -694,7 +738,7 @@ export default function Home() {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
-                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                         />
                       </svg>
                     </div>
