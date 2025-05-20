@@ -138,7 +138,7 @@ export default function GalleryPage() {
     "@type": "ImageGallery",
     name: "Galeri Karya Merekamimpi Photography",
     description: "Koleksi foto-foto terbaik dari berbagai proyek fotografi Merekamimpi di Yogyakarta",
-    url: "https://merekamimpi.com/gallery",
+    url: "https://merekamimpi.my.id/gallery",
     image: galleryItems.map((item) => item.imageUrl),
   }
 
@@ -148,7 +148,7 @@ export default function GalleryPage() {
       <SEOHead
         title="Galeri Karya Merekamimpi - Fotografi Profesional Yogyakarta"
         description="Lihat koleksi foto-foto terbaik dari berbagai proyek fotografi Merekamimpi di Yogyakarta, termasuk foto wisuda, produk, event, dan potret."
-        canonicalUrl="https://merekamimpi.com/gallery"
+        canonicalUrl="https://merekamimpi.my.id/gallery"
         structuredData={galleryStructuredData}
         structuredDataType="Article"
       />
@@ -167,7 +167,7 @@ export default function GalleryPage() {
               "@type": "ListItem",
               position: 2,
               name: "Galeri",
-              item: "https://merekamimpi.com/gallery",
+              item: "https://merekamimpi.my.id/gallery",
             },
           ],
         }}

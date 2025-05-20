@@ -182,7 +182,7 @@ export default function Home() {
           url: "https://merekamimpi.com",
           potentialAction: {
             "@type": "SearchAction",
-            target: "https://merekamimpi.com/search?q={search_term_string}",
+            target: "https://merekamimpi.my.id/search?q={search_term_string}",
             "query-input": "required name=search_term_string",
           },
         }}
