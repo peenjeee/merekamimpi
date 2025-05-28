@@ -29,6 +29,14 @@ export function SEOHead({
       <Head>
         <link rel="canonical" href={canonicalUrl} />
       </Head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMMW9LJ34M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NMMW9LJ34M');
+</script>
       {structuredData && <JsonLd type={structuredDataType} data={structuredData} />}
     </>
   )

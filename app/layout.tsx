@@ -94,6 +94,14 @@ export default function RootLayout({
       <meta name="google-adsense-account" content="ca-pub-2491405868841693"></meta>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2491405868841693"
      crossorigin="anonymous"></script>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMMW9LJ34M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NMMW9LJ34M');
+</script>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Suspense>
             <AnimationProvider>
@@ -106,6 +114,14 @@ export default function RootLayout({
         </ThemeProvider>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2491405868841693"
      crossorigin="anonymous"></script>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMMW9LJ34M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NMMW9LJ34M');
+</script>
       </body>
     </html>
   )
