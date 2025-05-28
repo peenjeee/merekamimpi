@@ -1,3 +1,5 @@
+
+
 import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
@@ -5,14 +7,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "./analytics"
 import { Suspense } from "react"
 import { AnimationProvider } from "@/components/animation-provider"
-
-// Only import CSS that doesn't cause MIME type issues
-import "animate.css"
-import "@splidejs/react-splide/css"
-
-// Import the CustomCursor component
 import { CustomCursor } from "@/components/custom-cursor"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import Head from "next/head"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -89,19 +87,38 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" suppressHydrationWarning>
-      <body className={inter.className}>
-      <meta name="google-site-verification" content="Dl99mJiGpiJN25kcb8Fa97CFsfY3zimdWV-nKQh51Gs" />
-      <meta name="google-adsense-account" content="ca-pub-2491405868841693"></meta>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2491405868841693"
-     crossorigin="anonymous"></script>
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMMW9LJ34M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      <Head>
+        {/* Meta Verification */}
+        <meta
+          name="google-site-verification"
+          content="Dl99mJiGpiJN25kcb8Fa97CFsfY3zimdWV-nKQh51Gs"
+        />
+        <meta name="google-adsense-account" content="ca-pub-2491405868841693" />
+      </Head>
 
-  gtag('config', 'G-NMMW9LJ34M');
-</script>
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-NMMW9LJ34M"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-NMMW9LJ34M');
+        `}
+      </Script>
+
+      {/* Google AdSense */}
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2491405868841693"
+        strategy="afterInteractive"
+        crossOrigin="anonymous"
+      />
+
+      <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Suspense>
             <AnimationProvider>
@@ -112,16 +129,6 @@ export default function RootLayout({
             <Analytics />
           </Suspense>
         </ThemeProvider>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2491405868841693"
-     crossorigin="anonymous"></script>
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMMW9LJ34M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NMMW9LJ34M');
-</script>
       </body>
     </html>
   )
