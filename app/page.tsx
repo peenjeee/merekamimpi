@@ -313,7 +313,7 @@ export default function Home() {
                     data-aos-delay="100"
                   >
                     <Image
-                      src="/img/tugu.jpg?height=400&width=400"
+                      src="/img/potrait1.jpg?height=400&width=400"
                       alt="Fotografi Merekamimpi"
                       fill
                       className="object-cover"
@@ -325,7 +325,7 @@ export default function Home() {
                     data-aos-delay="300"
                   >
                     <Image
-                      src="/img/malbor.jpg?height=400&width=400"
+                      src="/img/street1.jpg?height=400&width=400"
                       alt="Fotografi Merekamimpi"
                       fill
                       className="object-cover"
