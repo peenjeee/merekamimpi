@@ -434,7 +434,7 @@ export default function Home() {
                   </TiltCard>
                   <TiltCard className="aspect-square relative rounded-lg overflow-hidden">
                     <Image
-                      src="/img/event.jpg?height=400&width=400"
+                      src="/img/bd.jpeg?height=400&width=400"
                       alt={`Fotografi ${services[activeService].title} 3`}
                       fill
                       className="object-cover"
@@ -442,7 +442,7 @@ export default function Home() {
                   </TiltCard>
                   <TiltCard className="aspect-square relative rounded-lg overflow-hidden">
                     <Image
-                      src="/img/person.jpg?height=400&width=400"
+                      src="/img/bd1.jpeg?height=400&width=400"
                       alt={`Fotografi ${services[activeService].title} 4`}
                       fill
                       className="object-cover"
@@ -498,8 +498,8 @@ export default function Home() {
               </AnimatedElement>
 
               <SplideCarousel
-                images={[1, 2, 3, 4].map((item) => ({
-                  src: `https://placehold.net/default.svg`,
+                images={[1, 2, 3, 4, 5, 6].map((item) => ({
+                  src: `/galeri/galeri${item}.jpg?height=800&width=800&text=Portfolio+${item}`,
                   alt: `Portfolio image ${item}`,
                 }))}
                 options={{
@@ -520,7 +520,7 @@ export default function Home() {
                   data-aos-delay={item * 100}
                 >
                   <Image
-                    src={`https://placehold.net/default.svg`}
+                    src={`/galeri/galeri${item}.jpg?height=800&width=800&text=Portfolio+${item}`}
                     alt={`Portfolio image ${item}`}
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
