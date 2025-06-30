@@ -418,7 +418,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-2 p-2">
                   <TiltCard className="aspect-square relative rounded-lg overflow-hidden">
                     <Image
-                      src="/img/wisuda.jpg?height=400&width=400"
+                      src="/img/Girls.jpeg?height=400&width=400"
                       alt={`Fotografi ${services[activeService].title} 1`}
                       fill
                       className="object-cover"
@@ -426,7 +426,7 @@ export default function Home() {
                   </TiltCard>
                   <TiltCard className="aspect-square relative rounded-lg overflow-hidden">
                     <Image
-                      src="/img/produk.jpg?height=400&width=400"
+                      src="/img/Man.jpeg?height=400&width=400"
                       alt={`Fotografi ${services[activeService].title} 2`}
                       fill
                       className="object-cover"
