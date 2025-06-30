@@ -498,8 +498,8 @@ export default function Home() {
               </AnimatedElement>
 
               <SplideCarousel
-                images={[1, 2, 3, 4, 5, 6].map((item) => ({
-                  src: `/galeri/galeri${item}.jpg?height=800&width=800&text=Portfolio+${item}`,
+                images={[1, 2, 3, 4].map((item) => ({
+                  src: `https://placehold.net/default.svg`,
                   alt: `Portfolio image ${item}`,
                 }))}
                 options={{
@@ -520,7 +520,7 @@ export default function Home() {
                   data-aos-delay={item * 100}
                 >
                   <Image
-                    src={`/galeri/galeri${item}.jpg?height=800&width=800&text=Portfolio+${item}`}
+                    src={`https://placehold.net/default.svg`}
                     alt={`Portfolio image ${item}`}
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
