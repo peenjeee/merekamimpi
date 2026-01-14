@@ -313,7 +313,7 @@ export default function Home() {
                     data-aos-delay="100"
                   >
                     <Image
-                      src="/img/potrait1.jpg?height=400&width=400"
+                      src="https://placehold.co/400x400/1d365e/ffffff?text=Portrait+1"
                       alt="Fotografi Merekamimpi"
                       fill
                       className="object-cover"
@@ -325,7 +325,7 @@ export default function Home() {
                     data-aos-delay="300"
                   >
                     <Image
-                      src="/img/street1.jpg?height=400&width=400"
+                      src="https://placehold.co/400x400/1d365e/ffffff?text=Street+1"
                       alt="Fotografi Merekamimpi"
                       fill
                       className="object-cover"
@@ -339,7 +339,7 @@ export default function Home() {
                     data-aos-delay="200"
                   >
                     <Image
-                      src="/img/potrait2.jpg?height=400&width=400"
+                      src="https://placehold.co/400x400/1d365e/ffffff?text=Portrait+2"
                       alt="Fotografi Merekamimpi"
                       fill
                       className="object-cover"
@@ -351,7 +351,7 @@ export default function Home() {
                     data-aos-delay="400"
                   >
                     <Image
-                      src="/img/event1.jpg?height=400&width=400"
+                      src="https://placehold.co/400x400/1d365e/ffffff?text=Event+1"
                       alt="Fotografi Merekamimpi"
                       fill
                       className="object-cover"
@@ -418,7 +418,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-2 p-2">
                   <TiltCard className="aspect-square relative rounded-lg overflow-hidden">
                     <Image
-                      src="/img/Girls.jpeg?height=400&width=400"
+                      src="https://placehold.co/400x400/1d365e/ffffff?text=Photo+1"
                       alt={`Fotografi ${services[activeService].title} 1`}
                       fill
                       className="object-cover"
@@ -426,7 +426,7 @@ export default function Home() {
                   </TiltCard>
                   <TiltCard className="aspect-square relative rounded-lg overflow-hidden">
                     <Image
-                      src="/img/Man.jpeg?height=400&width=400"
+                      src="https://placehold.co/400x400/1d365e/ffffff?text=Photo+2"
                       alt={`Fotografi ${services[activeService].title} 2`}
                       fill
                       className="object-cover"
@@ -434,7 +434,7 @@ export default function Home() {
                   </TiltCard>
                   <TiltCard className="aspect-square relative rounded-lg overflow-hidden">
                     <Image
-                      src="/img/bd.jpeg?height=400&width=400"
+                      src="https://placehold.co/400x400/1d365e/ffffff?text=Photo+3"
                       alt={`Fotografi ${services[activeService].title} 3`}
                       fill
                       className="object-cover"
@@ -442,7 +442,7 @@ export default function Home() {
                   </TiltCard>
                   <TiltCard className="aspect-square relative rounded-lg overflow-hidden">
                     <Image
-                      src="/img/bd1.jpeg?height=400&width=400"
+                      src="https://placehold.co/400x400/1d365e/ffffff?text=Photo+4"
                       alt={`Fotografi ${services[activeService].title} 4`}
                       fill
                       className="object-cover"
@@ -583,7 +583,7 @@ export default function Home() {
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 rounded-full bg-[#1d365e]/10 flex items-center justify-center mr-4">
-                      <Image src="/img/user.png" alt="Avatar" width={40} height={40} className="rounded-full" />
+                      <Image src="https://placehold.co/40x40/1d365e/ffffff?text=U" alt="Avatar" width={40} height={40} className="rounded-full" />
                     </div>
                     <div>
                       <h4 className="font-semibold">{testimonial.name}</h4>
