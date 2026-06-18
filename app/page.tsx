@@ -25,11 +25,21 @@ import { Navbar } from "@/components/navbar"
 import { SEOHead } from "@/components/seo-head"
 import { JsonLd } from "@/components/json-ld"
 
+type ServiceKey = "wisuda" | "produk" | "event" | "potret"
+
+const serviceKeys: ServiceKey[] = ["wisuda", "produk", "event", "potret"]
+
+function isServiceKey(value: string | null): value is ServiceKey {
+  return value !== null && serviceKeys.includes(value as ServiceKey)
+}
+
 export default function Home() {
   const searchParams = useSearchParams()
   const serviceParam = searchParams.get("service")
 
-  const [activeService, setActiveService] = useState(serviceParam || "wisuda")
+  const [activeService, setActiveService] = useState<ServiceKey>(
+    isServiceKey(serviceParam) ? serviceParam : "wisuda",
+  )
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Refs for animation targets
@@ -98,7 +108,7 @@ export default function Home() {
 
   // Update active service when URL parameter changes
   useEffect(() => {
-    if (serviceParam && ["wisuda", "produk", "event", "potret"].includes(serviceParam)) {
+    if (isServiceKey(serviceParam)) {
       setActiveService(serviceParam)
 
       // Scroll to layanan section if service param exists
@@ -378,7 +388,7 @@ export default function Home() {
 
             <div className="flex justify-center mb-8 services-tabs" data-aos="fade-up" data-aos-delay="300">
               <div className="inline-flex bg-white rounded-full p-1 shadow-sm">
-                {Object.keys(services).map((key) => (
+                {serviceKeys.map((key) => (
                   <button
                     key={key}
                     onClick={() => setActiveService(key)}
@@ -590,7 +600,7 @@ export default function Home() {
                       <p className="text-sm text-gray-500">{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+                  <p className="text-gray-700 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                   <div className="mt-4 flex">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />

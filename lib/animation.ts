@@ -7,7 +7,9 @@ if (typeof window !== "undefined") {
 }
 
 // Fade in animation
-export const fadeIn = (element: string | Element, delay = 0, duration = 1) => {
+export const fadeIn = (element: string | Element | null, delay = 0, duration = 1) => {
+  if (!element) return
+
   gsap.fromTo(
     element,
     {
@@ -25,7 +27,9 @@ export const fadeIn = (element: string | Element, delay = 0, duration = 1) => {
 }
 
 // Fade in from left animation
-export const fadeInLeft = (element: string | Element, delay = 0, duration = 1) => {
+export const fadeInLeft = (element: string | Element | null, delay = 0, duration = 1) => {
+  if (!element) return
+
   gsap.fromTo(
     element,
     {
@@ -43,7 +47,9 @@ export const fadeInLeft = (element: string | Element, delay = 0, duration = 1) =
 }
 
 // Fade in from right animation
-export const fadeInRight = (element: string | Element, delay = 0, duration = 1) => {
+export const fadeInRight = (element: string | Element | null, delay = 0, duration = 1) => {
+  if (!element) return
+
   gsap.fromTo(
     element,
     {
@@ -62,6 +68,8 @@ export const fadeInRight = (element: string | Element, delay = 0, duration = 1) 
 
 // Stagger animation for multiple elements
 export const staggerAnimation = (elements: gsap.TweenTarget, stagger = 0.1, delay = 0) => {
+  if (!elements) return
+
   gsap.fromTo(
     elements,
     {
@@ -80,7 +88,13 @@ export const staggerAnimation = (elements: gsap.TweenTarget, stagger = 0.1, dela
 }
 
 // Scroll trigger animation
-export const scrollAnimation = (element: string | Element, trigger: string | Element, start = "top 80%") => {
+export const scrollAnimation = (
+  element: string | Element | null,
+  trigger: string | Element,
+  start = "top 80%",
+) => {
+  if (!element) return
+
   gsap.fromTo(
     element,
     {
@@ -101,7 +115,9 @@ export const scrollAnimation = (element: string | Element, trigger: string | Ele
 }
 
 // Scale animation
-export const scaleAnimation = (element: string | Element, delay = 0, duration = 1) => {
+export const scaleAnimation = (element: string | Element | null, delay = 0, duration = 1) => {
+  if (!element) return
+
   gsap.fromTo(
     element,
     {

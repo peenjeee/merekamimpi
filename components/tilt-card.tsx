@@ -13,21 +13,23 @@ export function TiltCard({ children, className = "", options = {} }: TiltCardPro
   const tiltRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (tiltRef.current) {
-      VanillaTilt.init(tiltRef.current, {
-        max: 15,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.3,
-        scale: 1.05,
-        ...options,
-      })
-    }
+    const tiltElement = tiltRef.current
+    if (!tiltElement) return
+
+    VanillaTilt.init(tiltElement, {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.3,
+      scale: 1.05,
+      ...options,
+    })
 
     return () => {
-      if (tiltRef.current) {
-        ;(tiltRef.current as any)?.vanillaTilt?.destroy()
+      const elementWithTilt = tiltElement as HTMLDivElement & {
+        vanillaTilt?: { destroy: () => void }
       }
+      elementWithTilt.vanillaTilt?.destroy()
     }
   }, [options])
 

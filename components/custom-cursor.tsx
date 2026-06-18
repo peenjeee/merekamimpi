@@ -78,7 +78,7 @@ export function CustomCursor({
       trailElement.style.height = `${size * 0.8}px`
       trailElement.style.backgroundColor = color
       trailElement.style.transition = "transform 0.1s, opacity 0.5s"
-      trailElement.style.transform = `translate(${position.x}px, ${position.y}px) scale(${i / trailCount})`
+      trailElement.style.transform = `translate(0, 0) scale(${i / trailCount})`
       trailElement.style.opacity = `${1 - i / trailCount}`
       document.body.appendChild(trailElement)
       trailElements.push(trailElement)

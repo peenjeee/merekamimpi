@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, type ReactNode } from "react"
+import { useCallback, useEffect, useRef, type ReactNode } from "react"
 import { useInView } from "react-intersection-observer"
 
 interface AnimatedElementProps {
@@ -27,7 +27,14 @@ export function AnimatedElement({
     threshold,
   })
 
-  const elementRef = useRef<HTMLDivElement>(null)
+  const elementRef = useRef<HTMLDivElement | null>(null)
+  const setRefs = useCallback(
+    (node: HTMLDivElement | null) => {
+      ref(node)
+      elementRef.current = node
+    },
+    [ref],
+  )
 
   useEffect(() => {
     const element = elementRef.current
@@ -45,13 +52,7 @@ export function AnimatedElement({
 
   return (
     <div
-      ref={(node) => {
-        // This assigns the ref to both the react-intersection-observer and our local ref
-        if (node) {
-          ref(node)
-          elementRef.current = node
-        }
-      }}
+      ref={setRefs}
       className={className}
       style={{
         visibility: "hidden",

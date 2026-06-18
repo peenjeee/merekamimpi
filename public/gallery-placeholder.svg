@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+  <title id="title">Placeholder galeri Merekamimpi</title>
+  <desc id="description">Foto galeri akan segera hadir</desc>
+  <rect width="1200" height="800" fill="#eef2f7" />
+  <circle cx="600" cy="330" r="92" fill="#dbe4ef" />
+  <g fill="none" stroke="#1d365e" stroke-linecap="round" stroke-linejoin="round" stroke-width="18">
+    <rect x="520" y="278" width="160" height="112" rx="20" />
+    <path d="M558 278l18-30h48l18 30" />
+    <circle cx="600" cy="334" r="34" />
+  </g>
+  <text
+    x="600"
+    y="482"
+    fill="#1d365e"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="42"
+    font-weight="700"
+    text-anchor="middle"
+  >
+    Merekamimpi
+  </text>
+  <text
+    x="600"
+    y="536"
+    fill="#64748b"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="28"
+    text-anchor="middle"
+  >
+    Foto akan segera hadir
+  </text>
+</svg>
