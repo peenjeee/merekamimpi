@@ -61,7 +61,7 @@ export const fadeInRight = (element: string | Element, delay = 0, duration = 1) 
 }
 
 // Stagger animation for multiple elements
-export const staggerAnimation = (elements: string | Element, stagger = 0.1, delay = 0) => {
+export const staggerAnimation = (elements: gsap.TweenTarget, stagger = 0.1, delay = 0) => {
   gsap.fromTo(
     elements,
     {

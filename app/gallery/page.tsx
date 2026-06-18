@@ -2,16 +2,13 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft } from "lucide-react"
 import { ParticleBackground } from "@/components/particle-background"
 import { fadeIn, staggerAnimation } from "@/lib/animation"
 
-// Import the new components at the top of the file
 import { SplideCarousel } from "@/components/splide-carousel"
 import { AnimatedElement } from "@/components/animated-element"
-import { Tooltip } from "@/components/tooltip"
-import { showToast } from "@/utils/sweet-alert"
-import { SimpleGallery } from "@/components/simple-gallery" // Use SimpleGallery instead
+import { SimpleGallery } from "@/components/simple-gallery"
 import { Navbar } from "@/components/navbar"
 import { SEOHead } from "@/components/seo-head"
 import { JsonLd } from "@/components/json-ld"
@@ -44,85 +41,74 @@ export default function GalleryPage() {
     { id: "potret", name: "Potret" },
   ]
 
-  // Gallery items - in a real implementation, this would come from a database or CMS
   const galleryItems = [
     {
       id: 1,
-      //title: "Produk Rambut",
+      title: "Produk Rambut",
       category: "produk",
-      //description: "Produk rambut yang bagus",
-     // imageUrl: "/galeri/galeri1.jpg?height=800&width=800&text=Produk+1",
-     imageUrl: "https://placehold.net/default.svg",
+      description: "Fotografi produk perawatan rambut",
+      imageUrl: "/galeri/galeri1.jpg",
     },
     {
       id: 2,
-      //title: "Wisuda Kelulusan",
+      title: "Wisuda Kelulusan",
       category: "wisuda",
-      //description: "Momen wisuda yang indah",
-      //imageUrl: "/galeri/galeri2.jpg?height=800&width=800&text=Wisuda+1",
-      imageUrl: "https://placehold.net/default.svg",
+      description: "Momen wisuda yang penuh kebahagiaan",
+      imageUrl: "/galeri/galeri2.jpg",
     },
     {
       id: 3,
-      //title: "Produk Coca Cola",
+      title: "Produk Minuman",
       category: "produk",
-      //description: "Produk coca cola yang bagus",
-      //imageUrl: "/galeri/galeri3.jpg?height=800&width=800&text=Produk+2",
-      imageUrl: "https://placehold.net/default.svg",
+      description: "Fotografi produk minuman",
+      imageUrl: "/galeri/galeri3.jpg",
     },
     {
       id: 4,
-      //title: "Wisuda Kelulusan",
+      title: "Wisuda Kelulusan",
       category: "wisuda",
-      //description: "Momen wisuda yang indah",
-      //imageUrl: "/galeri/galeri4.jpg?height=800&width=800&text=Potret+1",
-      imageUrl: "https://placehold.net/default.svg",
+      description: "Potret kelulusan yang berkesan",
+      imageUrl: "/galeri/galeri4.jpg",
     },
     {
       id: 5,
-      //title: "Wedding Event",
+      title: "Wedding Event",
       category: "event",
-      //description: "Event pernikahan di Yogyakarta",
-      //imageUrl: "/galeri/galeri5.jpg?height=800&width=800&text=Wisuda+2",
-      imageUrl: "https://placehold.net/default.svg",
+      description: "Dokumentasi acara pernikahan di Yogyakarta",
+      imageUrl: "/galeri/galeri5.jpg",
     },
     {
       id: 6,
-      //title: "Produk Kuliner",
+      title: "Produk Kuliner",
       category: "produk",
-      //description: "Fotografi kuliner untuk restoran lokal",
-      //imageUrl: "/galeri/galeri6.jpg?height=800&width=800&text=Produk+2",
-      imageUrl: "https://placehold.net/default.svg",
+      description: "Fotografi kuliner untuk bisnis lokal",
+      imageUrl: "/galeri/galeri6.jpg",
     },
     {
       id: 7,
-      //title: "Wisuda Universitas Gadjah Mada",
+      title: "Wisuda Universitas Gadjah Mada",
       category: "wisuda",
-      //description: "Momen wisuda di Yogyakarta",
-      //imageUrl: "/galeri/galeri7.jpg?height=800&width=800&text=Event+2",
-      imageUrl: "https://placehold.net/default.svg",
+      description: "Momen wisuda di Yogyakarta",
+      imageUrl: "/galeri/galeri7.jpg",
     },
     {
       id: 8,
-      //title: "Potret Model",
+      title: "Potret Model",
       category: "potret",
-      //description: "Model perempuan di Yogyakarta",
-      //imageUrl: "/galeri/galeri8.jpg?height=800&width=800&text=Potret+2",
-      imageUrl: "https://placehold.net/default.svg",
+      description: "Sesi potret model di Yogyakarta",
+      imageUrl: "/galeri/galeri8.jpg",
     },
     {
       id: 9,
-      //title: "Potret Kesenian",
+      title: "Potret Kesenian",
       category: "potret",
-      //description: "Potret seniman di Yogyakarta",
-      //imageUrl: "/galeri/galeri9.jpg?height=800&width=800&text=Wisuda+3",
-      imageUrl: "https://placehold.net/default.svg",
+      description: "Potret seniman di Yogyakarta",
+      imageUrl: "/galeri/galeri9.jpg",
     },
   ]
 
   const [activeCategory, setActiveCategory] = useState("all")
   const whatsappLink = "https://api.whatsapp.com/send?phone=6285975200852"
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Filter gallery items based on active category
   const filteredItems =
@@ -147,7 +133,7 @@ export default function GalleryPage() {
     "@type": "ImageGallery",
     name: "Galeri Karya Merekamimpi Photography",
     description: "Koleksi foto-foto terbaik dari berbagai proyek fotografi Merekamimpi di Yogyakarta",
-    url: "https://www.merekamimpi.my.id/gallery",
+    url: "https://www.merekamimpi.biz.id/gallery",
     image: galleryItems.map((item) => item.imageUrl),
   }
 
@@ -157,7 +143,7 @@ export default function GalleryPage() {
       <SEOHead
         title="Galeri Karya Merekamimpi - Fotografi Profesional Yogyakarta"
         description="Lihat koleksi foto-foto terbaik dari berbagai proyek fotografi Merekamimpi di Yogyakarta, termasuk foto wisuda, produk, event, dan potret."
-        canonicalUrl="https://www.merekamimpi.my.id/gallery"
+        canonicalUrl="https://www.merekamimpi.biz.id/gallery"
         structuredData={galleryStructuredData}
         structuredDataType="Article"
       />
@@ -170,13 +156,13 @@ export default function GalleryPage() {
               "@type": "ListItem",
               position: 1,
               name: "Beranda",
-              item: "https://www.merekamimpi.my.id",
+              item: "https://www.merekamimpi.biz.id",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Galeri",
-              item: "https://www.merekamimpi.my.id/gallery",
+              item: "https://www.merekamimpi.biz.id/gallery",
             },
           ],
         }}

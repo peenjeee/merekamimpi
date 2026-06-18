@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.merekamimpi.my.id/sitemap.xml
+Sitemap: https://www.merekamimpi.biz.id/sitemap.xml

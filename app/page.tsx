@@ -146,7 +146,7 @@ export default function Home() {
   const businessStructuredData = {
     name: "Merekamimpi Photography",
     description: "Jasa fotografi profesional di Yogyakarta untuk wisuda, produk, event, dan potret.",
-    url: "https://www.merekamimpi.my.id",
+    url: "https://www.merekamimpi.biz.id",
     telephone: "+6285975200852",
     email: "merekamimpi@gmail.com",
     address: {
@@ -179,10 +179,10 @@ export default function Home() {
         type="WebSite"
         data={{
           name: "Merekamimpi Photography",
-          url: "https://www.merekamimpi.my.id",
+          url: "https://www.merekamimpi.biz.id",
           potentialAction: {
             "@type": "SearchAction",
-            target: "https://www.merekamimpi.my.id/search?q={search_term_string}",
+            target: "https://www.merekamimpi.biz.id/search?q={search_term_string}",
             "query-input": "required name=search_term_string",
           },
         }}

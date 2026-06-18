@@ -17,7 +17,7 @@ interface SEOHeadProps {
 export function SEOHead({
   title = "Merekamimpi - Jasa Fotografi Profesional Yogyakarta",
   description = "Merekamimpi adalah jasa fotografi profesional yang berbasis di Yogyakarta, hadir untuk mengabadikan setiap momen berharga dengan gaya yang hangat, estetik, dan penuh cerita.",
-  canonicalUrl = "https://www.merekamimpi.my.id",
+  canonicalUrl = "https://www.merekamimpi.biz.id",
   ogImage = "/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
